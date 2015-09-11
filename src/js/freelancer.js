@@ -15,6 +15,25 @@ $(function() {
     });
 });
 
+(function() {
+    var logo = Snap("#svg-container"),
+        atag = document.getElementById("#toggle");
+
+    whiteAngle = logo.select("#white-bracket");
+    blueAngle = logo.select("#blue-bracket");
+
+    logo.hover(function() {
+			  whiteAngle.animate({transform: "r45,200,200"}, 200, mina.easein);
+        blueAngle.animate({transform: "r45,200,200"}, 200, mina.easein);
+      },
+      function() {
+/*      icon.animate({fill: '#111111'}, 200);*/
+				whiteAngle.animate({transform: "r0,0,50"}, 200, mina.easeout);
+        blueAngle.animate({transform: "r0,0,50"}, 200, mina.easeout);
+			}
+    );
+})();
+
 // Floating label headings for the contact form
 $(function() {
     $("body").on("input propertychange", ".floating-label-form-group", function(e) {
