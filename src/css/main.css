@@ -102,17 +102,17 @@ header {
     font-size: 1.55em; }
   .navbar-fixed-top {
     padding: 1em 0;
-    transition: padding .3s; }
+    transition: padding .3s;
+    transition: background-color .5s; }
     .navbar-fixed-top .navbar-brand {
       width: 6em;
       padding: 0;
       transition: all .3s; }
     .navbar-fixed-top.navbar-shrink {
       padding: 10px 0;
-      transition: background-color .5s;
       background-color: #2c3e50; }
       .navbar-fixed-top.navbar-shrink .navbar-brand {
-        width: 4em; } }
+        width: 3.6em; } }
 
 .navbar {
   text-transform: uppercase;
@@ -158,6 +158,11 @@ section {
         color: #2c3e50; }
 
 @media (max-width: 767px) {
+  .navbar-default {
+    background-color: #2c3e50; }
+    .navbar-default .navbar-brand {
+      width: 4em;
+      padding: 8px 15px; }
   section {
     padding: 75px 0; }
     section.first {
