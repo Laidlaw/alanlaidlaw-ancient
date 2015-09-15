@@ -27,7 +27,7 @@ gulp.task('compileSass', function() {
 
 gulp.task('html', ['compileSass'], function() {
   var assets = useref.assets();
-  return gulp.src(options.src + 'index.html')
+  return gulp.src(options.src + '*.html')
               .pipe(assets)
               .pipe(iff('*.js', uglify()))
               .pipe(iff('*.css', csso()))
@@ -41,7 +41,8 @@ gulp.task('watchFiles', function() {
 });
 
 gulp.task('assets', function(){
-  return gulp.src([options.src + 'img/**/*',
+  return gulp.src([options.src + '*.pdf',
+                    options.src + 'img/**/*',
                    options.src + 'fonts/**/*',
                    options.src + 'font-awesome/**/*',
                    options.src + 'mail/**/*'], {base: options.src})
