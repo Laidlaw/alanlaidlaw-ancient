@@ -80,24 +80,24 @@ hr {
 .img-centered {
     margin: 0 auto;
 }
+
 header {
     text-align: center;
     color: $white;
     // position: relative;
-    background: $color_mountain_meadow_approx;
+    background-color: $color_mountain_meadow_approx;
     background: url(../img/stickies.jpg) 0 0 no-repeat fixed;
     position: relative;
+    transition: background-color .7s;
     &:before {
       @extend %curtains;
+      transition: background-color .5s;
       background-color:  rgba(47, 154, 255, 0.93); //$color_mountain_meadow_approx
       z-index:0;
-      &.midnight {
-        background-color: red;
-      }
     }
     .container {
         padding-top: 100px;
-        padding-bottom: 200px;
+        padding-bottom: 100px;
     }
     img {
         display: block;
@@ -120,6 +120,10 @@ header {
         }
     }
 }
+.marqueeMoon.midnight:before  {
+  background: $color_pickled_bluewood_approx;
+}
+
 @media(min-width:768px) {
     header {
         .container {
@@ -175,7 +179,7 @@ header {
     background-color: transparent;
     .navbar-nav {
         li.active {
-            a { background-color: $color_blue_bracket;}
+            a { background-color: $color_mountain_meadow_approx;}
         }
     }
 }

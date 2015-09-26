@@ -81,17 +81,17 @@ hr.star-primary {
 header {
   text-align: center;
   color: #fff;
-  background: #2F9AFF;
+  background-color: #2F9AFF;
   background: url(../img/stickies.jpg) 0 0 no-repeat fixed;
-  position: relative; }
+  position: relative;
+  transition: background-color .7s; }
   header:before {
+    transition: background-color .5s;
     background-color: rgba(47, 154, 255, 0.93);
     z-index: 0; }
-    header:before.midnight {
-      background-color: red; }
   header .container {
     padding-top: 100px;
-    padding-bottom: 200px; }
+    padding-bottom: 100px; }
   header img {
     display: block;
     margin: 0 auto 20px; }
@@ -107,6 +107,9 @@ header {
     max-width: 30em;
     display: block;
     margin: 0 auto; }
+
+.marqueeMoon.midnight:before {
+  background: #2c3e50; }
 
 @media (min-width: 768px) {
   header .container {
@@ -144,7 +147,7 @@ header {
   border: 0;
   background-color: transparent; }
   .navbar-default .navbar-nav li.active a {
-    background-color: #00BCD4; }
+    background-color: #2F9AFF; }
 
 .navbar-inverse {
   border: 0; }
