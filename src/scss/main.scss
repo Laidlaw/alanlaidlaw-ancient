@@ -1,6 +1,6 @@
 @import 'variables';
 @import 'mixins';
-
+@import 'flexbox';
 
 body {
     overflow-x: hidden;
@@ -69,7 +69,7 @@ hr {
         }
     }
 }
-
+.logo {line-height: 0;}
 .img-headshot {
   height: 250px;
   clip-path: circle(95px at center 100px);
@@ -86,7 +86,8 @@ header {
     color: $white;
     // position: relative;
     background-color: $color_mountain_meadow_approx;
-    background: url(../img/stickies.jpg) 0 0 no-repeat fixed;
+    background: url(../img/stickies.jpg) center center no-repeat fixed;
+    background-size: cover;
     position: relative;
     transition: background-color .7s;
     &:before {
@@ -104,12 +105,19 @@ header {
         margin: 0 auto 20px;
     }
     .intro-text {
+      position: relative;
         .name {
-            display: block;
+            display: inline-flex;
+            justify-content: space-around;
+            align-items: center;
             text-transform: uppercase;
             font-family: $font_0, $font_1, $font_2, $font_3, $font_4;
             font-size: 2em;
             font-weight: 700;
+            .logo div {
+              width:100px;
+              margin: 20px;
+            }
         }
         .skills {
             font-size: 1em;
@@ -122,6 +130,11 @@ header {
 }
 .marqueeMoon.midnight:before  {
   background: $color_pickled_bluewood_approx;
+}
+
+
+.row {
+  display: flex;
 }
 
 @media(min-width:768px) {

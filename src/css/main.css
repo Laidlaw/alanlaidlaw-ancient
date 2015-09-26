@@ -69,6 +69,9 @@ hr.star-primary {
     color: #2c3e50;
     background-color: #fff; }
 
+.logo {
+  line-height: 0; }
+
 .img-headshot {
   height: 250px;
   clip-path: circle(95px at center 100px);
@@ -82,7 +85,8 @@ header {
   text-align: center;
   color: #fff;
   background-color: #2F9AFF;
-  background: url(../img/stickies.jpg) 0 0 no-repeat fixed;
+  background: url(../img/stickies.jpg) center center no-repeat fixed;
+  background-size: cover;
   position: relative;
   transition: background-color .7s; }
   header:before {
@@ -95,21 +99,31 @@ header {
   header img {
     display: block;
     margin: 0 auto 20px; }
-  header .intro-text .name {
-    display: block;
-    text-transform: uppercase;
-    font-family: Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;
-    font-size: 2em;
-    font-weight: 700; }
-  header .intro-text .skills {
-    font-size: 1em;
-    font-weight: 300;
-    max-width: 30em;
-    display: block;
-    margin: 0 auto; }
+  header .intro-text {
+    position: relative; }
+    header .intro-text .name {
+      display: inline-flex;
+      justify-content: space-around;
+      align-items: center;
+      text-transform: uppercase;
+      font-family: Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 2em;
+      font-weight: 700; }
+      header .intro-text .name .logo div {
+        width: 100px;
+        margin: 20px; }
+    header .intro-text .skills {
+      font-size: 1em;
+      font-weight: 300;
+      max-width: 30em;
+      display: block;
+      margin: 0 auto; }
 
 .marqueeMoon.midnight:before {
   background: #2c3e50; }
+
+.row {
+  display: flex; }
 
 @media (min-width: 768px) {
   header .container {

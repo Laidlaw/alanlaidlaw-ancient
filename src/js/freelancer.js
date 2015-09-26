@@ -17,10 +17,9 @@ $(function() {
 
 (function() {
     var logo = Snap("#svg-container"),
-        atag = document.getElementById("#toggle");
-
-    whiteAngle = logo.select("#white-bracket");
-    blueAngle = logo.select("#blue-bracket");
+        atag = $(".logo").hasClass("toggle"),
+        whiteAngle = logo.select("#white-bracket"),
+        blueAngle = logo.select("#blue-bracket");
 
     logo.hover(function() {
 			  whiteAngle.animate({transform: "r45,200,200"}, 100, mina.easein);
