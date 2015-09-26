@@ -83,10 +83,21 @@ hr {
 header {
     text-align: center;
     color: $white;
+    // position: relative;
     background: $color_mountain_meadow_approx;
+    background: url(../img/stickies.jpg) 0 0 no-repeat fixed;
+    position: relative;
+    &:before {
+      @extend %curtains;
+      background-color:  rgba(47, 154, 255, 0.93); //$color_mountain_meadow_approx
+      z-index:0;
+      &.midnight {
+        background-color: red;
+      }
+    }
     .container {
         padding-top: 100px;
-        padding-bottom: 50px;
+        padding-bottom: 200px;
     }
     img {
         display: block;
@@ -113,7 +124,7 @@ header {
     header {
         .container {
             padding-top: 200px;
-            padding-bottom: 100px;
+            //padding-bottom: 100px;
         }
         .intro-text {
             .name {
