@@ -1,16 +1,22 @@
 @import 'variables';
 @import 'mixins';
+// @import 'typeplate-sk/typeplate';
+@import 'tufte-css/et-bembo';
+@import 'tufte-css/tufte';
 @import 'flexbox';
 
 body {
     overflow-x: hidden;
+    background-color: $offwhite;
 }
+
 p {
     font-size: 20px;
     &.small {
         font-size: 16px;
     }
 }
+
 a {
     outline: 0;
     color: $color_mountain_meadow_approx;
@@ -35,7 +41,7 @@ h1 {
     @extend %headers;
 }
 h2 {
-    @extend %headers;
+    // @extend %headers;
 }
 h3 {
     @extend %headers;
@@ -83,7 +89,7 @@ hr {
 
 header {
     text-align: center;
-    color: $white;
+    color: $offwhite;
     // position: relative;
     background-color: $color_mountain_meadow_approx;
     background: url(../img/stickies.jpg) center center no-repeat fixed;
@@ -135,7 +141,9 @@ header {
 
 .row {
   display: flex;
+  flex-flow: column;
 }
+
 
 @media(min-width:768px) {
     header {
