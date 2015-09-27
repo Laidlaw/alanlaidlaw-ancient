@@ -1,9 +1,17 @@
 //colors
-$color_blue_bracket: #00BCD4;
-$color_mountain_meadow_approx: #2F9AFF;
+$aqua: #00BCD4;
+$bright_blue: #2F9AFF;
+$dark_blue: #2c3e50;
+$navy: #1B5285;
+$silly_puddy_purple: #5F70A4;
+
+$color_blue_bracket: $aqua;
+$color_mountain_meadow_approx: $bright_blue;
 $offwhite: #F8F8F8; //#fffff8
 $white: #fff;
-$color_pickled_bluewood_approx: #2c3e50;
+$color_pickled_bluewood_approx: $dark_blue;
+
+
 $color_mountain_meadow_90_approx: rgba(47, 154, 255, 0.9);
 $color_gallery_approx: #eee;
 $color_ebony_clay_approx: #233140;

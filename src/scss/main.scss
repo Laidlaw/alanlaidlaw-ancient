@@ -3,6 +3,7 @@
 // @import 'typeplate-sk/typeplate';
 @import 'tufte-css/et-bembo';
 @import 'tufte-css/tufte';
+@import 'navbar';
 @import 'flexbox';
 
 body {
@@ -19,6 +20,7 @@ p {
 
 a {
     outline: 0;
+    text-decoration: none;
     color: $color_mountain_meadow_approx;
     &:hover {
         outline: 0;
@@ -41,7 +43,7 @@ h1 {
     @extend %headers;
 }
 h2 {
-    // @extend %headers;
+    @extend %headers;
 }
 h3 {
     @extend %headers;
@@ -55,26 +57,26 @@ h5 {
 h6 {
     @extend %headers;
 }
-hr {
-    &.star-light {
-        @extend %rules;
-        border-color: $white;
-        &:after {
-            @extend %rulesAfter;
-            color: $white;
-            background-color: $color_mountain_meadow_approx;
-        }
-    }
-    &.star-primary {
-        @extend %rules;
-        border-color: $color_pickled_bluewood_approx;
-        &:after {
-            @extend %rulesAfter;
-            color: $color_pickled_bluewood_approx;
-            background-color: $white;
-        }
-    }
-}
+// hr {
+//     &.star-light {
+//         @extend %rules;
+//         border-color: $white;
+//         &:after {
+//             @extend %rulesAfter;
+//             color: $white;
+//             background-color: $color_mountain_meadow_approx;
+//         }
+//     }
+//     &.star-primary {
+//         @extend %rules;
+//         border-color: $color_pickled_bluewood_approx;
+//         &:after {
+//             @extend %rulesAfter;
+//             color: $color_pickled_bluewood_approx;
+//             background-color: $white;
+//         }
+//     }
+// }
 .logo {line-height: 0;}
 .img-headshot {
   height: 250px;
@@ -93,13 +95,17 @@ header {
     // position: relative;
     background-color: $color_mountain_meadow_approx;
     background: url(../img/stickies.jpg) center center no-repeat fixed;
+    // background: url(../img/star.png) center center no-repeat fixed;
+    // background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/starfield_stock_1.jpg) center center no-repeat fixed;
     background-size: cover;
     position: relative;
     transition: background-color .7s;
     &:before {
       @extend %curtains;
       transition: background-color .5s;
-      background-color:  rgba(47, 154, 255, 0.93); //$color_mountain_meadow_approx
+      background-color:  rgba(47, 154, 255, 0.93);
+      //$color_mountain_meadow_approx
+      // rgba(15, 84, 150, 0.94)
       z-index:0;
     }
     .container {
@@ -142,13 +148,37 @@ header {
 .row {
   display: flex;
   flex-flow: column;
+  margin-left: -15px;
+  margin-right: -15px;
 }
 
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
 
 @media(min-width:768px) {
     header {
         .container {
-            padding-top: 200px;
+            // padding-top: 200px;
             //padding-bottom: 100px;
         }
         .intro-text {
@@ -166,14 +196,13 @@ header {
         transition: padding .3s;
         transition: background-color .5s;
         .navbar-brand {
-            width: 6em;
+            width: 9em;
             padding:0;
             //Instead of the line below you could use @includetransition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
             transition: all .3s;
         }
         &.navbar-shrink {
             padding: 10px 0;
-
             background-color: $color_pickled_bluewood_approx;
             .navbar-brand {
                 width: 3.6em;
@@ -200,7 +229,7 @@ header {
     background-color: transparent;
     .navbar-nav {
         li.active {
-            a { background-color: $color_mountain_meadow_approx;}
+            a { border-bottom: 2px solid $offwhite;}
         }
     }
 }
@@ -208,15 +237,18 @@ header {
 .navbar-inverse {
     border: 0;
 }
-section {
+section, main {
     padding: 100px 0;
     h2 {
         margin: 0;
         font-size: 3em;
     }
+    &.mystery {
+      background: $navy;
+    }
     &.success {
         color: $white;
-        background: $color_mountain_meadow_approx;
+        background: $silly_puddy_purple;
         a {
             outline: 0;
             // color: $color_blue_bracket;
@@ -243,11 +275,11 @@ section {
     .navbar-default {
       background-color: $color_pickled_bluewood_approx;
       .navbar-brand {
-          width: 4em;
+          width: 7em;
           padding: 8px 15px;
       }
     }
-    section {
+    section, main {
         padding: 75px 0;
         &.first {
             padding-top: 75px;
