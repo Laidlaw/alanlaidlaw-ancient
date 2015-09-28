@@ -1588,7 +1588,7 @@ h1, h2, h3, h4, h5, h6 {
 html {
   font-size: 15px; }
 
-main {
+.tufter {
   width: 87.5%;
   margin-left: auto;
   margin-right: auto;
@@ -1597,7 +1597,7 @@ main {
   color: #2c3e50;
   max-width: 1400px;
   counter-reset: sidenote-counter; }
-  main img {
+  .tufter img {
     mix-blend-mode: multiply;
     width: 100%; }
 
