@@ -2338,17 +2338,18 @@ body {
   width: 100%;
   order: 2;
   flex-flow: row wrap; }
-  .metro img {
-    mix-blend-mode: multiply;
-    width: 100%; }
-  .metro > li {
+  .metro a:hover {
+    color: #F8F8F8; }
+  .metro > * {
     display: flex;
-    min-width: 200px;
+    min-width: auto;
     min-height: 150px;
     flex: 1 1 auto;
     position: relative;
     justify-content: space-around;
-    align-items: center; }
+    align-items: center;
+    margin: 2px;
+    color: white; }
   @media only screen and (max-width: 700px) {
     .metro .li {
       flex-basis: calc(100% * 0.333333333333333);
@@ -2357,7 +2358,13 @@ body {
     .metro .li {
       flex-basis: calc(100% * 0.5); } }
   footer .metro > li {
-    flex-flow: column; }
+    flex-flow: column;
+    justify-content: space-between;
+    flex: 1 1; }
+
+.arrow {
+  max-height: 50px;
+  opacity: .5; }
 
 .sticky-notes {
   color: #fff;

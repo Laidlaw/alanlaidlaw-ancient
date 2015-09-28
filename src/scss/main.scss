@@ -28,16 +28,21 @@ body {
   margin: 0;
   width: 100%;
   order: 2;
-  img { mix-blend-mode: multiply; width:100%;}
+  // img { mix-blend-mode: multiply; width:100%;}
   flex-flow: row wrap;
-  > li {
+    a:hover {
+      color: $offwhite;
+    }
+  > * {
     display: flex;
-    min-width: 200px;
+    min-width: auto;
     min-height: 150px;
     flex: 1 1 auto;
     position: relative;
     justify-content: space-around;
     align-items: center;
+    margin:2px;
+    color: white;
     // background: #79797B;
     // border: 1px solid #706667;
     }
@@ -55,9 +60,16 @@ body {
   footer & {
     > li {
       flex-flow:column;
+      justify-content: space-between;
+      flex: 1 1;
     }
   }
 }
+.arrow {
+  max-height: 50px;
+  opacity: .5;
+}
+
 
 .sticky-notes {
     color: $white;
