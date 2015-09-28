@@ -1,5 +1,7 @@
 @import 'variables';
 @import 'mixins';
+@import 'sass-material-colors/sass/sass-material-colors';
+@import 'sass-material-colors/sass/sass-material-colors-classes';
 // @import 'typeplate-sk/typeplate';
 @import 'tufte-css/et-bembo';
 @import 'tufte-css/tufte';
@@ -7,8 +9,42 @@
 @import 'flexbox';
 
 body {
+    margin: 0;
     overflow-x: hidden;
     background-color: $offwhite;
+}
+
+.flex {
+  @extend %flexbox;
+}
+.metro {
+  // background-color: material-color('cyan','500');
+  order: 2;
+  padding: 0;
+  display: flex;
+  img { mix-blend-mode: multiply; width:100%;}
+  flex-flow: row wrap;
+      list-style: none;
+  li {width: 33%;
+    height: 250px;
+    position: relative;
+    // background: #79797B;
+    // border: 1px solid #706667;
+    }
+}
+
+.success {
+    color: $white;
+    background: material-color('cyan', '500') url(../img/stickies.jpg) center center no-repeat fixed;
+    position: relative;
+    &:before {
+      @extend %curtains;
+      transition: background-color .5s;
+      background-color:  rgba(47, 154, 255, 0.93);
+      //$color_mountain_meadow_approx
+      // rgba(15, 84, 150, 0.94)
+      z-index:0;
+    }
 }
 
 p {
@@ -84,7 +120,7 @@ h6 {
   -webkit-clip-path: circle(95px at center 100px);
   -moz-clip-path: circle(95px at center 100px);
 }
-
+// img { mix-blend-mode: multiply; }
 .img-centered {
     margin: 0 auto;
 }
@@ -93,8 +129,10 @@ header {
     text-align: center;
     color: $offwhite;
     // position: relative;
-    background-color: $color_mountain_meadow_approx;
-    background: url(../img/stickies.jpg) center center no-repeat fixed;
+    background-color: material-color('blue','600');
+
+    // background: url(../img/stickies.jpg) center center no-repeat fixed;
+
     // background: url(../img/star.png) center center no-repeat fixed;
     // background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/starfield_stock_1.jpg) center center no-repeat fixed;
     background-size: cover;
@@ -110,7 +148,7 @@ header {
     }
     .container {
         padding-top: 100px;
-        padding-bottom: 100px;
+        padding-bottom: 50px;
     }
     img {
         display: block;
@@ -122,7 +160,7 @@ header {
             display: inline-flex;
             justify-content: space-around;
             align-items: center;
-            text-transform: uppercase;
+            // text-transform: uppercase;
             font-family: $font_0, $font_1, $font_2, $font_3, $font_4;
             font-size: 2em;
             font-weight: 700;
@@ -151,7 +189,21 @@ header {
   margin-left: -15px;
   margin-right: -15px;
 }
-
+.clients {
+    background-color: material-color('cyan','500');
+    order: 2;
+    padding: 0;
+    display: flex;
+    img { mix-blend-mode: multiply; width:100%;}
+    flex-flow: row-reverse wrap-reverse;
+        list-style: none;
+    li {width: 300px;
+      height: 250px;
+      position: relative;
+      // background: #79797B;
+      // border: 1px solid #706667;
+      }
+  }
 
 .container {
   margin-right: auto;
@@ -247,8 +299,6 @@ section, main {
       background: $navy;
     }
     &.success {
-        color: $white;
-        background: $silly_puddy_purple;
         a {
             outline: 0;
             // color: $color_blue_bracket;
@@ -441,75 +491,4 @@ footer {
             outline: 0;
         }
     }
-}
-.portfolio-modal {
-    .modal-content {
-        padding: 100px 0;
-        min-height: 100%;
-        border: 0;
-        //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
-        border-radius: 0;
-        text-align: center;
-        //Instead of the line below you could use @includebackground-clip($clip)
-        background-clip: border-box;
-        //Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-        box-shadow: none;
-        h2 {
-            margin: 0;
-            font-size: 3em;
-        }
-        img {
-            margin-bottom: 30px;
-        }
-        .item-details {
-            margin: 30px 0;
-        }
-    }
-    .close-modal {
-        position: absolute;
-        top: 25px;
-        right: 25px;
-        width: 75px;
-        height: 75px;
-        background-color: transparent;
-        cursor: pointer;
-        &:hover {
-            opacity: .3;
-        }
-        .lr {
-            z-index: 1051;
-            width: 1px;
-            height: 75px;
-            margin-left: 35px;
-            background-color: $color_pickled_bluewood_approx;
-            //Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-            transform: rotate(45deg);
-            .rl {
-                z-index: 1052;
-                width: 1px;
-                height: 75px;
-                background-color: $color_pickled_bluewood_approx;
-                //Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-                transform: rotate(90deg);
-            }
-        }
-    }
-    .modal-backdrop {
-        display: none;
-        opacity: 0;
-    }
-}
-.floating-label-form-group::not(:first-child) {
-    padding-left: 14px;
-    border-left: 1px solid $color_gallery_approx;
-}
-.floating-label-form-group-with-value label {
-    top: 0;
-    opacity: 1;
-}
-.floating-label-form-group-with-focus label {
-    color: $color_mountain_meadow_approx;
-}
-form .row:first-child .floating-label-form-group {
-    border-top: 1px solid $color_gallery_approx;
 }

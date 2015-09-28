@@ -1,0 +1,71 @@
+.portfolio-modal {
+    .modal-content {
+        padding: 100px 0;
+        min-height: 100%;
+        border: 0;
+        //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+        border-radius: 0;
+        text-align: center;
+        //Instead of the line below you could use @includebackground-clip($clip)
+        background-clip: border-box;
+        //Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: none;
+        h2 {
+            margin: 0;
+            font-size: 3em;
+        }
+        img {
+            margin-bottom: 30px;
+        }
+        .item-details {
+            margin: 30px 0;
+        }
+    }
+    .close-modal {
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        width: 75px;
+        height: 75px;
+        background-color: transparent;
+        cursor: pointer;
+        &:hover {
+            opacity: .3;
+        }
+        .lr {
+            z-index: 1051;
+            width: 1px;
+            height: 75px;
+            margin-left: 35px;
+            background-color: $color_pickled_bluewood_approx;
+            //Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+            transform: rotate(45deg);
+            .rl {
+                z-index: 1052;
+                width: 1px;
+                height: 75px;
+                background-color: $color_pickled_bluewood_approx;
+                //Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+                transform: rotate(90deg);
+            }
+        }
+    }
+    .modal-backdrop {
+        display: none;
+        opacity: 0;
+    }
+}
+.floating-label-form-group::not(:first-child) {
+    padding-left: 14px;
+    border-left: 1px solid $color_gallery_approx;
+}
+.floating-label-form-group-with-value label {
+    top: 0;
+    opacity: 1;
+}
+.floating-label-form-group-with-focus label {
+    color: $color_mountain_meadow_approx;
+}
+form .row:first-child .floating-label-form-group {
+    border-top: 1px solid $color_gallery_approx;
+}
