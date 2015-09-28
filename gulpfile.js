@@ -42,6 +42,7 @@ gulp.task('watchFiles', function() {
 
 gulp.task('assets', function(){
   return gulp.src([options.src + '*.pdf',
+                    options.src + 'CNAME',
                     options.src + 'img/**/*',
                    options.src + 'fonts/**/*',
                    options.src + 'font-awesome/**/*',
