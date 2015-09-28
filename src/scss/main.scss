@@ -8,6 +8,10 @@
 @import 'navbar';
 @import 'flexbox';
 
+* {
+  box-sizing: border-box;
+}
+
 body {
     margin: 0;
     overflow-x: hidden;
@@ -19,21 +23,43 @@ body {
 }
 .metro {
   // background-color: material-color('cyan','500');
-  order: 2;
   padding: 0;
-  display: flex;
+  list-style: none;
+  margin: 0;
+  width: 100%;
+  order: 2;
   img { mix-blend-mode: multiply; width:100%;}
   flex-flow: row wrap;
-      list-style: none;
-  li {width: 33%;
-    height: 250px;
+  > li {
+    display: flex;
+    min-width: 200px;
+    min-height: 150px;
+    flex: 1 1 auto;
     position: relative;
+    justify-content: space-around;
+    align-items: center;
     // background: #79797B;
     // border: 1px solid #706667;
     }
+  @media only screen and (max-width: 700px) {
+    .li {
+      flex-basis: calc(100% * 0.333333333333333);
+      border-bottom: 0
+    }
+  }
+  @media only screen and (max-width: 250px) {
+    .li {
+      flex-basis: calc(100% * 0.5);
+    }
+  }
+  footer & {
+    > li {
+      flex-flow:column;
+    }
+  }
 }
 
-.success {
+.sticky-notes {
     color: $white;
     background: material-color('cyan', '500') url(../img/stickies.jpg) center center no-repeat fixed;
     position: relative;
