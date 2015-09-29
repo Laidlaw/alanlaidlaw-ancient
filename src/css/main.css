@@ -1598,8 +1598,7 @@ html {
   max-width: 1400px;
   counter-reset: sidenote-counter; }
   .tufter img {
-    mix-blend-mode: multiply;
-    width: 100%; }
+    mix-blend-mode: multiply; }
 
 .tufte {
   font-weight: 400;
@@ -2339,13 +2338,15 @@ body {
   order: 2;
   flex-flow: row wrap; }
   .metro a:hover {
-    color: #F8F8F8; }
+    color: #F8F8F8;
+    background-color: transparent; }
   .metro > * {
     display: flex;
     min-width: auto;
     min-height: 150px;
     flex: 1 1 auto;
     position: relative;
+    transition: background-color .5sec;
     justify-content: space-around;
     align-items: center;
     margin: 2px;

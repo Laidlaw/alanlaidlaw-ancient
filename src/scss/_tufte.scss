@@ -13,7 +13,7 @@ html { font-size: 15px; }
        color: $main-font-color;
        max-width: 1400px;
        counter-reset: sidenote-counter;
-       img { mix-blend-mode: multiply; width:100%;}
+       img { mix-blend-mode: multiply; }
 
      }
 
@@ -189,7 +189,7 @@ main {
                    font-size: 1.0rem;
                    line-height: 1.6; }
 
-  .sidenote-number { counter-increment: sidenote-counter; }
+  .sidenote-number { counter-increment: sidenote-counter; color: firebrick;}
 
   .sidenote-number:after, .sidenote:before { content: counter(sidenote-counter) " ";
                                              font-family: et-bembo-roman-old-style;

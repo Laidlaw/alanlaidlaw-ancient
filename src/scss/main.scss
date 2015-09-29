@@ -32,6 +32,7 @@ body {
   flex-flow: row wrap;
     a:hover {
       color: $offwhite;
+      background-color: transparent;
     }
   > * {
     display: flex;
@@ -39,6 +40,7 @@ body {
     min-height: 150px;
     flex: 1 1 auto;
     position: relative;
+    transition: background-color .5sec;
     justify-content: space-around;
     align-items: center;
     margin:2px;
