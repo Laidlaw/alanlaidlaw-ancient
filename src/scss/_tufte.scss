@@ -113,7 +113,7 @@ table.booktabs { width: auto;
 .booktabs tbody tr td.c { text-align: center !important; }
 .booktabs tbody tr td.r { text-align: right !important; }
 
-main {
+.tufter {
   article { position: relative;
             padding: 5rem 0rem; }
 
@@ -135,7 +135,7 @@ blockquote p { font-size: 1.1rem;
 
 blockquote footer { width: 50%;
                     text-align: right; }
-main {
+.tufter {
   ul { width: 45%;
        -webkit-padding-start: 5%;
        -webkit-padding-end: 5%;
@@ -189,7 +189,7 @@ main {
                    font-size: 1.0rem;
                    line-height: 1.6; }
 
-  .sidenote-number { counter-increment: sidenote-counter; color: firebrick;}
+  .sidenote-number { counter-increment: sidenote-counter; color: material-color('red','500');}
 
   .sidenote-number:after, .sidenote:before { content: counter(sidenote-counter) " ";
                                              font-family: et-bembo-roman-old-style;
@@ -202,7 +202,8 @@ main {
                            left: 0.1rem; }
 
   .sidenote:before { content: counter(sidenote-counter) " ";
-                     top: -0.5rem; }
+                     top: -0.5rem;
+                   color: material-color('red','500');}
 
   p, footer, div.table-wrapper { width: 55%; }
 

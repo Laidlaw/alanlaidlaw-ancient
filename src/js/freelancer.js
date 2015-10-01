@@ -15,6 +15,14 @@ $(function() {
     });
 });
 
+$(function() {
+  $( ".sticky-notes a" ).click(function() {
+    var $detail = $(this);
+    $detail.find( "aside" ).toggle();
+    event.preventDefault();
+  });
+});
+
 (function() {
     var logo = Snap("#svg-container"),
         atag = $(".logo").hasClass("toggle"),

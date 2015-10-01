@@ -1,0 +1,23 @@
+.sticky-notes {
+    width: 100%;
+    color: $white;
+    background: material-color('cyan', '500') url(../img/stickies.jpg) center center no-repeat fixed;
+    position: relative;
+    &:before {
+      @extend %curtains;
+      transition: background-color .5s;
+      background-color:  rgba(47, 154, 255, 0.93);
+      //$color_mountain_meadow_approx
+      // rgba(15, 84, 150, 0.94)
+      z-index:0;
+    }
+}
+.skills  {
+  .container {
+    width:100%;
+  }
+  aside {
+    width: 60%;
+    display: none;
+  }
+}
