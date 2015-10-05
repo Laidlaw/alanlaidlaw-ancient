@@ -328,7 +328,7 @@ header {
     border: 0;
 }
 section, main {
-    padding: 100px 0;
+    padding: 50px 0;
     h2 {
         margin: 0;
         font-size: 3em;
@@ -533,13 +533,13 @@ footer {
 .scroll-top .btn{
     display: inline-flex;
     justify-content: center;
-    
+
     line-height: 0;
     padding: 0;
   .arrow {
     transform: rotate(-90deg);
     transform-origin: 50% 50%;
-    max-width: 40%;
+    width: 40%;
     opacity: 1;
     /* height: auto; */
     display: inline

@@ -11,6 +11,20 @@
       // rgba(15, 84, 150, 0.94)
       z-index:0;
     }
+    h4 {
+      line-height: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &:after {
+        content: "";
+        background: url("../img/white-bracket.svg") center center no-repeat;
+        width: 30px;
+        height: 30px;
+        justify-content: center;
+        align-items: center;
+      }
+    }
 }
 .skills  {
   .container {

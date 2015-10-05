@@ -2411,6 +2411,18 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
     transition: background-color 0.5s;
     background-color: rgba(47, 154, 255, 0.93);
     z-index: 0; }
+  .sticky-notes h4 {
+    line-height: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .sticky-notes h4:after {
+      content: "";
+      background: url("../img/white-bracket.svg") center center no-repeat;
+      width: 30px;
+      height: 30px;
+      justify-content: center;
+      align-items: center; }
 
 .skills .container {
   width: 100%; }
@@ -2618,7 +2630,7 @@ header {
   border: 0; }
 
 section, main {
-  padding: 100px 0; }
+  padding: 50px 0; }
   section h2, main h2 {
     margin: 0;
     font-size: 3em; }
@@ -2772,7 +2784,7 @@ footer {
   .scroll-top .btn .arrow {
     transform: rotate(-90deg);
     transform-origin: 50% 50%;
-    max-width: 40%;
+    width: 40%;
     opacity: 1;
     /* height: auto; */
     display: inline; }
