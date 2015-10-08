@@ -25,6 +25,7 @@
     "babel": "~5.8.23",
     "react": "~0.13.3",
     "react-blocks": "~1.1.2",
+    "react-dom": "^0.1.0",
     "react-headroom": "^1.6.2"
   }
 }

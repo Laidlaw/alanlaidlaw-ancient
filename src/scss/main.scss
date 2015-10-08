@@ -22,6 +22,7 @@ body {
     background-color: $offwhite;
 }
 
+
 // LAYOUT
 .flex {
   @extend %flexbox;
@@ -36,7 +37,7 @@ body {
   // img { mix-blend-mode: multiply; width:100%;}
   flex-flow: row wrap;
     a:hover {
-      color: $offwhite;
+      // color: $offwhite;
       // background-color: transparent;
     }
   > * {
@@ -95,24 +96,30 @@ p {
 a {
     outline: 0;
     text-decoration: none;
-    color: $color_mountain_meadow_approx;
+    color: material-color('cyan','500');
     &:hover {
         outline: 0;
-        color: $color_mountain_meadow_approx;
+        color: material-color('cyan','500');
     }
     &:focus {
         outline: 0;
-        color: $color_mountain_meadow_approx;
+        color: material-color('cyan','500');
     }
     &:active {
         outline: 0;
-        color: $color_mountain_meadow_approx;
+        color: material-color('cyan','500');
     }
     &.active {
         outline: 0;
-        color: $color_mountain_meadow_approx;
+        color: material-color('cyan','500');
     }
 }
+.btn-outline:hover, .btn-outline:focus, .btn-outline:active, .btn-outline.active {
+    border: solid 2px #fff;
+    color: material-color('cyan','500');
+    background: #fff;
+}
+
 h1 {
     @extend %headers;
 }

@@ -189,7 +189,7 @@ blockquote footer { width: 50%;
                    font-size: 1.0rem;
                    line-height: 1.6; }
 
-  .sidenote-number { counter-increment: sidenote-counter; color: material-color('red','500');}
+  .sidenote-number { counter-increment: sidenote-counter; color: material-color('cyan','500');}
 
   .sidenote-number:after, .sidenote:before { content: counter(sidenote-counter) " ";
                                              font-family: et-bembo-roman-old-style;
@@ -203,7 +203,7 @@ blockquote footer { width: 50%;
 
   .sidenote:before { content: counter(sidenote-counter) " ";
                      top: -0.5rem;
-                   color: material-color('red','500');}
+                   color: material-color('cyan','500');}
 
   p, footer, div.table-wrapper { width: 55%; }
 

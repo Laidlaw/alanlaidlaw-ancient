@@ -1801,7 +1801,7 @@ blockquote footer {
 
 .tufter .sidenote-number {
   counter-increment: sidenote-counter;
-  color: #f44336; }
+  color: #00bcd4; }
 
 .tufter .sidenote-number:after, .tufter .sidenote:before {
   content: counter(sidenote-counter) " ";
@@ -1818,7 +1818,7 @@ blockquote footer {
 .tufter .sidenote:before {
   content: counter(sidenote-counter) " ";
   top: -0.5rem;
-  color: #f44336; }
+  color: #00bcd4; }
 
 .tufter p, .tufter footer, .tufter div.table-wrapper {
   width: 55%; }
@@ -2446,8 +2446,6 @@ body {
   width: 100%;
   order: 2;
   flex-flow: row wrap; }
-  .metro a:hover {
-    color: #F8F8F8; }
   .metro > * {
     display: flex;
     min-width: auto;
@@ -2486,19 +2484,24 @@ p {
 a {
   outline: 0;
   text-decoration: none;
-  color: #2F9AFF; }
+  color: #00bcd4; }
   a:hover {
     outline: 0;
-    color: #2F9AFF; }
+    color: #00bcd4; }
   a:focus {
     outline: 0;
-    color: #2F9AFF; }
+    color: #00bcd4; }
   a:active {
     outline: 0;
-    color: #2F9AFF; }
+    color: #00bcd4; }
   a.active {
     outline: 0;
-    color: #2F9AFF; }
+    color: #00bcd4; }
+
+.btn-outline:hover, .btn-outline:focus, .btn-outline:active, .btn-outline.active {
+  border: solid 2px #fff;
+  color: #00bcd4;
+  background: #fff; }
 
 .logo {
   line-height: 0; }
