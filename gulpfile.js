@@ -26,12 +26,12 @@ gulp.task('compileSass', function() {
 });
 
 gulp.task('html', ['compileSass'], function() {
-  var assets = useref.assets();
+  //var assets = useref.assets();
   return gulp.src(options.src + '*.html')
-              .pipe(assets)
+              //.pipe(assets)
               .pipe(iff('*.js', uglify()))
               .pipe(iff('*.css', csso()))
-              .pipe(assets.restore())
+              //.pipe(assets.restore())
               .pipe(useref())
               .pipe(gulp.dest(options.dist));
 });
