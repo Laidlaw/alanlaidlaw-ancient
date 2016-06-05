@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="css/app.min.css">
 
     <!-- cdns -->
+
+    <script src="https://code.getmdl.io/1.1.3/material.min.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,100italic,100,300,300italic,400italic' rel='stylesheet' type='text/css'>
     <!-- <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css"> -->
     <!-- <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css"> -->
@@ -110,25 +112,41 @@
       <h2 >Hi, I'm Alan.</h2>
       <p class="newthought">In 2016 I started a new job at Ecos as the VP of Product. I have never worked full-time at a startup before. It is the most tactical and strategic job I have ever had. I’m coding in React and Elixir, designing in Sketch, transcribing notes from client interviews, writing business cases for the next quarter. I think we are building something great.</p>
       <p>In June, I’m going to the EnterpriseUx conference in San Antonio. The conference picked a design challenge that I submitted, so I’m going down there to try to solve it.</p>
-      <p>I have a newsletter called Sudoscience that I hope will become a regular habit.</p>
-
-        <p class="subtitle">
-          Short History
-        </p>
-        <p>
-          In middle school, my best friend and I drew and sold comics. It was my first startup. There was a thrill to fitting a narrative into a designed space that was only matched by Print Day. That's the day of the month we shipped product.
-        </p>
-        <p>
-          Curiousity &amp; sheer stubborness led me into web development. But I truly love working with people so I found myself moving closer to the start of the product lifecycle, where the ideas<label for="idea-generation" class="margin-toggle sidenote-number"></label><input type="checkbox" id="idea-generation" class="margin-toggle">
-        <span class="sidenote">
-        See <a href="http://www.cooper.com/topics/pair-design/">Cooper's Pair Design</a></span> emerge from collaboration.
-        </p>
-          <!-- <p>Part of the sport is learning. Whether architecture, investing, or development, I’m continuously learning
-            <label for="currently-reading" class="margin-toggle sidenote-number"></label><input type="checkbox" id="currently-reading" class="margin-toggle">
-        <span class="sidenote">
-        Want to see what I've been reading? <a href="https://www.instapaper.com/p/alanlaidlaw">Here you go.</a></span>
-        </p> -->
+      <p>I have a newsletter called Sudoscience that I hope will become a regular habit. Feel free to sign up:</p>
     </main>
+    <div class="signup-wrapper  wrapper">
+      <div >
+  <!-- <div class="mdl-card__title">
+    Sudoscience are the weekly results of an alchemist's unsupervised learning algorithm that attempts to understand civilization through its tech journalism.
+  </div> -->
+  <!-- <center><span>Sign up for the weekly newsletter:</span></center> -->
+  <form action="https://www.getrevue.co/profile/laidlaw/add_subscriber" method="post" id="revue-form" name="revue-form"  target="_blank">
+    <!-- <div class="mdl-card__title">
+      <h2 class="mdl-card__title-text">The Latest Bullshit, Right in you inbox</h2>
+    </div>-->
+      <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--4-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label revue-form-group">
+          <label class="mdl-textfield__label" for="member_email">Email address*</label>
+          <input class="mdl-textfield__input revue-form-field"  type="email" name="member[email]" id="member_email">
+        </div>
+        <div class="mdl-cell mdl-cell--4-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label revue-form-group">
+          <label class="mdl-textfield__label" for="member_first_name">First name </label>
+          <input class="mdl-textfield__input revue-form-field"  type="text" name="member[first_name]" id="member_first_name">
+        </div>
+        <div class="mdl-cell mdl-cell--4-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label revue-form-group">
+          <label class="mdl-textfield__label" for="member_last_name">Last name</label>
+          <input class="mdl-textfield__input revue-form-field"  type="text" name="member[last_name]" id="member_last_name">
+        </div>
+    </div>
+
+    <center>
+      <input class="mdl-button mdl-js-button mdl-js-ripple-effect" type="submit" value="Sign me up for the weekly newsletter" name="member[subscribe]" id="member_submit">
+    </center>
+
+  </form>
+</div>
+
+    </div>
     <!-- Portfolio Section -->
 
 
