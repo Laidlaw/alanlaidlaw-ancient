@@ -3,6 +3,9 @@
 @import '../../node_modules/sass-material-colors/sass/sass-material-colors';
 @import '../../node_modules/sass-material-colors/sass/sass-material-colors-classes';
 // @import 'typeplate-sk/typeplate';
+@import "textfield/textfield",
+        "grid/grid",
+        "button/button";
 @import 'et-bembo';
 @import 'tufte';
 @import 'navbar';
@@ -255,6 +258,9 @@ header {
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
+  > * {
+    position: relative;
+  }
 }
 @media (min-width: 768px) {
   .container {
@@ -551,4 +557,9 @@ footer {
     /* height: auto; */
     display: inline
   }
+}
+
+.sudo {
+  color:white;
+  border:none;
 }
