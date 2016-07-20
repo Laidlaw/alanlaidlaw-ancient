@@ -8856,7 +8856,7 @@ h1, h2, h3, h4, h5, h6 {
   .mdl-textfield--floating-label.is-focused .mdl-textfield__label,
   .mdl-textfield--floating-label.is-dirty .mdl-textfield__label,
   .mdl-textfield--floating-label.has-placeholder .mdl-textfield__label {
-    color: #00bcd4;
+    color: #ff4081;
     font-size: 12px;
     top: 4px;
     visibility: visible; }
@@ -8868,7 +8868,7 @@ h1, h2, h3, h4, h5, h6 {
     color: #d50000;
     font-size: 12px; }
   .mdl-textfield__label:after {
-    background-color: #00bcd4;
+    background-color: #ff4081;
     bottom: 20px;
     content: '';
     height: 2px;
@@ -11014,6 +11014,8 @@ header {
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px; }
+  .container > * {
+    position: relative; }
 
 @media (min-width: 768px) {
   .container {
